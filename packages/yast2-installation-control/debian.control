@@ -1,0 +1,14 @@
+Source: yast2-installation-control
+Section: unknown
+Priority: extra
+Standards-Version: 3.9.2
+Maintainer: YaST devel <yast-devel@opensuse.org>
+Homepage: http://github.com/yast/yast-installation-control
+Vcs-Git: git://github.com/yast/yast-installation-control.git
+
+Package: yast2-installation-control
+Architecture: all
+Depends: ${misc:Depends}
+Description: YaST2 - RNG schema for installation control files
+  This package contains RNG schema for validating the installation control files.
+

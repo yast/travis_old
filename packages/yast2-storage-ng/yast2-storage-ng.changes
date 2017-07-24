@@ -1,0 +1,382 @@
+-------------------------------------------------------------------
+Tue Jul 18 11:43:26 UTC 2017 - ancor@suse.com
+
+- Adjusted the guided proposal to work properly on scenarios with
+  DM RAIDs.
+
+-------------------------------------------------------------------
+Mon Jul 17 09:07:39 UTC 2017 - ancor@suse.com
+
+- Adjusted the guided proposal to work properly on scenarios with
+  Multipath I/O.
+
+-------------------------------------------------------------------
+Wed Jul 12 15:37:16 UTC 2017 - ancor@suse.com
+
+- Replaced the original prototype of the expert partitioner with
+  the one coming from yast2-partitioner.
+- Added #supported_fstab_options and #default_partition_id methods
+  to Y2Storage::Filesystems::Type.
+- Removed Y2Storage::DevicesLists and not longer needed modules
+  from Y2Storage::Refinements
+- 0.1.31
+
+-------------------------------------------------------------------
+Tue Jul 11 11:18:06 UTC 2017 - jreidinger@suse.com
+
+- Added PartitionId#to_human_string and PartitionId::formattable?
+- 0.1.30
+
+-------------------------------------------------------------------
+Thu Jul  6 08:11:59 UTC 2017 - gsouza@suse.com
+
+- Added verifications for disk in network.
+- 0.1.29
+
+-------------------------------------------------------------------
+Tue Jul  4 14:29:40 UTC 2017 - jlopez@suse.com
+
+- Added new class Y2Storage::Proposal::Base.
+- Proper assignment of default values for new proposals.
+- 0.1.28
+
+-------------------------------------------------------------------
+Tue Jul  4 08:32:12 UTC 2017 - ancor@suse.com
+
+- Added AutoinstProfile::PartitioningSection which allows to export
+  the current system (or any other devicegraph) to an AutoYaST
+  profile (only plain partitions supported so far).
+- 0.1.27
+
+-------------------------------------------------------------------
+Mon Jul  3 15:50:43 UTC 2017 - jlopez@suse.com
+
+- Adapt proposal to different situations (disable home, snapshots,
+  etc)
+- 0.1.26
+
+-------------------------------------------------------------------
+Mon Jul  3 13:36:17 UTC 2017 - jreidinger@suse.com
+
+- add LvmVg#basename
+- add PartitionTables::Base#delete_all_partitions
+- add logger to all devices
+- add LvmVg#name
+- 0.1.25
+
+-------------------------------------------------------------------
+Tue Jun 27 15:05:52 UTC 2017 - igonzalezsosa@suse.com
+
+- Add LVM support for AutoYaST partitioning (bsc#1044697).
+- 0.1.24
+
+-------------------------------------------------------------------
+Tue Jun 27 09:04:58 UTC 2017 - ancor@suse.com
+
+- More robust Y2Storage::StorageManager#probe
+
+-------------------------------------------------------------------
+Mon Jun 26 11:56:23 UTC 2017 - jreidinger@suse.com
+
+- Added Y2Storage::MdParity#to_human_string and
+  Y2Storage::MdLevel#to_human_string
+- 0.1.23
+
+-------------------------------------------------------------------
+Mon Jun 26 08:56:07 UTC 2017 - aschnell@suse.com
+
+- Added Y2Storage::Md wrapper
+- 0.1.22
+
+-------------------------------------------------------------------
+Mon Jun 19 12:30:46 UTC 2017 - mvidner@suse.com
+
+- Added Y2Storage::DiskSize#human_floor, Y2Storage::Region#size
+- 0.1.21
+
+-------------------------------------------------------------------
+Mon Jun 19 08:33:19 UTC 2017 - igonzalezsosa@suse.com
+
+- AutoinstProposal is loaded with the rest of the proposal
+  classes when 'y2storage' is required.
+- 0.1.20
+
+-------------------------------------------------------------------
+Mon Jun 19 06:58:54 UTC 2017 - jilopez@localhost
+
+- Adjustments to DASD to ensure the proposal works as expected
+  in such devices.
+- Added Devicegraph#disk_devices to get all DASDs and disks.
+- DASD support added to YAML reader and writer.
+
+-------------------------------------------------------------------
+Fri Jun 16 12:47:40 UTC 2017 - igonzalezsosa@suse.com
+
+- Add basic support for AutoYaST customized partitioning
+  (only plain partitions are supported)
+- 0.1.19
+
+-------------------------------------------------------------------
+Thu Jun 15 07:17:28 UTC 2017 - jreidinger@suse.com
+
+- Add new method StorageManager.fake_from_xml for easy loading
+  of xml device graphs
+
+-------------------------------------------------------------------
+Wed Jun 14 20:21:27 CEST 2017 - aschnell@suse.com
+
+- added probe function to StorageManager
+- 0.1.18
+
+-------------------------------------------------------------------
+Thu Jun  8 09:36:29 UTC 2017 - ancor@suse.com
+
+- Added new method BlkDevice#to_be_formatted? (needed by
+  yast2-partitioner).
+- 0.1.17
+
+-------------------------------------------------------------------
+Tue Jun  6 17:57:16 CEST 2017 - shundhammer@suse.de
+
+- Don't insist on installing filesystem support packages that
+  are not available in any repo (bsc#1039830)
+- 0.1.16
+
+-------------------------------------------------------------------
+Thu Jun  1 10:27:25 UTC 2017 - ancor@suse.com
+
+- Fixed a bug in LvmLv#stripe_size=
+
+-------------------------------------------------------------------
+Mon May 22 10:58:24 UTC 2017 - ancor@suse.com
+
+- Refactored the proposal code in preparation for the AutoYaST
+  implementation. Removed PlannedVolume and PlannedVolumesList
+  classes in favor of new more specific classes in the Planned
+  namespace.
+- Fixed the proposal to never propose subvolumes that would be
+  shadowed by another proposed device.
+
+-------------------------------------------------------------------
+Wed May 17 11:53:56 UTC 2017 - jreidinger@suse.com
+
+- Add to Y2Storage::PartitionTables::Type#to_human_string
+- 0.1.15
+
+-------------------------------------------------------------------
+Thu May  4 13:21:28 CEST 2017 - schubi@suse.de
+
+- Added SCR agent .etc.mtab again until we have a proper
+  alternative for it (still needed in yast2-users).
+- 0.1.14
+
+-------------------------------------------------------------------
+Thu May  4 09:07:44 UTC 2017 - ancor@suse.com
+
+- Changelog entry to document stuff that was left behind.
+  See below.
+- Installation proposal now generates Btrfs subvolumes when needed
+  (according to control.xml and a fallback list).
+- Improved and fully functional Guided Setup.
+- Added new fields to ProposalSettings and renamed others (xxx_size
+  instead of xxx_disk_size). Similar changes in PlannedVolume.
+- New smaller and more convenient API for DiskAnalyzer.
+- Many documentation (Yardoc) improvements and fixes.
+- Added dummy activate callbacks (for activating a previous LUKS).
+- The installer now saves a xml representation of the probed and
+  staging devicegraphs before proceeding with the installation.
+- New API for accessing the libstorage objects from Ruby:
+  * New classes in the Y2Storage namespace offering a wrapper around
+    the corresponding libstorage classes and enums: Actiongraph,
+    AlignPolicy, BlkDevice, BtrfsSubvolume, Dasd, DasdFormat,
+    DasdType, DataTransport, Device, Devicegraph, Disk, Encryption,
+    LvmLv, LvmPv, LvmVg, Mountable, Partition, PartitionId,
+    PartitionType, Partitionable, Region and ResizeInfo.
+  * Mixins StorageClassWrapper and StorageEnumWrapper to define more
+    wrappers as needed.
+  * Removed EnumMappings.
+  * Removed most refinements in Y2Storage, functionality moved to
+    the new classes.
+  * Marked DevicesList as deprecated.
+  * Marked some refinements as deprecated.
+
+-------------------------------------------------------------------
+Tue Apr 25 08:50:10 UTC 2017 - jreidinger@suse.com
+
+- add Gpt#pmbr_boot(?/=) methods for protective MBR
+- 0.1.13
+
+-------------------------------------------------------------------
+Thu Mar 23 08:18:36 UTC 2017 - jilopez@localhost
+
+- Adapted prepdisk client to work in update mode.
+
+-------------------------------------------------------------------
+Tue Mar 21 17:11:37 CET 2017 - schubi@suse.de
+
+- Added to_s in ProposalSettings
+
+-------------------------------------------------------------------
+Thu Mar  9 12:47:11 UTC 2017 - ancor@suse.com
+
+- Partially adjust the proposal settings according to control.xml.
+
+-------------------------------------------------------------------
+Fri Mar  3 12:30:12 UTC 2017 - ancor@suse.com
+
+- Improved the EnumMappings module.
+- 0.1.12
+
+-------------------------------------------------------------------
+Thu Feb 16 11:37:57 UTC 2017 - ancor@suse.com
+
+- Improvements in the devicegraph query interface: added an
+  EncryptionLists class and adapted all the other classes to take
+  several encryption-related scenarios into account.
+- 0.1.11
+
+-------------------------------------------------------------------
+Wed Feb  8 13:19:24 UTC 2017 - ancor@suse.com
+
+- Added a prototype of the "Guided Setup" wizard to configure the
+  proposal settings.
+
+-------------------------------------------------------------------
+Wed Jan 25 14:35:38 UTC 2017 - ancor@suse.com
+
+- Proper management of completely empty disks (no partition table,
+  no file-system and no LVM PV) in the proposal.
+- Improved FreeDiskSpace and Disk#free_spaces to correctly handle
+  disks without partition table.
+- 0.1.10
+
+-------------------------------------------------------------------
+Thu Jan 19 10:54:22 CET 2017 - shundhammer@suse.de
+
+- Install storage-related software packages as needed: Migrated
+  UsedStorageFeatures to storage-ng and added PackageHandler
+- 0.1.9
+
+-------------------------------------------------------------------
+Tue Jan 17 12:07:18 UTC 2017 - ancor@suse.com
+
+- Improved StorageManager that complies to the Singleton pattern
+  and includes a revision counter for the staging devicegraph.
+- 0.1.8
+
+-------------------------------------------------------------------
+Mon Jan 16 12:27:03 UTC 2017 - ancor@suse.com
+
+- Added 'fstab_options' key to the YAML representation of the
+  devicegraphs used for testing.
+- 0.1.7
+
+-------------------------------------------------------------------
+Thu Jan  5 15:27:02 UTC 2017 - ancor@suse.com
+
+- Y2Storage::DiskAnalyzer - distinguish disks with no MBR gap
+  (0 bytes gap) from cases where the MBR gap is not applicable.
+  This fixes the proposal for some LVM scenarios with legacy boot.
+
+-------------------------------------------------------------------
+Fri Dec 23 12:44:24 UTC 2016 - ancor@suse.com
+
+- Removed unused ProposalDemo client (kind of obsoleted by
+  Dialogs::InstDiskProposal)
+
+-------------------------------------------------------------------
+Wed Dec 21 12:01:32 UTC 2016 - ancor@suse.com
+
+- Improvements in the devicegraph query interface
+  (DisksLists#with_name_or_partition)
+- 0.1.6
+
+-------------------------------------------------------------------
+Tue Dec 20 06:39:28 UTC 2016 - ancor@suse.com
+
+- Fixed partitioning proposal to not fail when trying to create
+  very small partitions (like bios_boot), to work better with uneven
+  spaces (not divisible by the minimal grain) and to reduce the
+  gaps between partitions.
+
+-------------------------------------------------------------------
+Wed Dec 14 16:01:00 UTC 2016 - ancor@suse.com
+
+- Write more precise information in the logs (DiskSize#to_s)
+
+-------------------------------------------------------------------
+Tue Dec 13 11:11:20 UTC 2016 - ancor@suse.com
+
+- Proposal does not try to set the boot flag if not supported
+  (for example, GPT partition tables)
+
+-------------------------------------------------------------------
+Fri Dec  9 10:30:33 UTC 2016 - aschnell@suse.com
+
+- Adapted to several changes in libstorage-ng
+
+-------------------------------------------------------------------
+Fri Nov 25 16:39:13 UTC 2016 - ancor@suse.com
+
+- Improvements in the LVM-based proposal
+
+-------------------------------------------------------------------
+Tue Nov 22 15:32:41 UTC 2016 - ancor@suse.com
+
+- Improvements in Refinements::DevicegraphLists
+
+-------------------------------------------------------------------
+Tue Nov 22 12:28:39 UTC 2016 - ancor@suse.com
+
+- Convenience method to check for GPT
+- Several methods added to most of the DevicesLists classes
+- 0.1.5
+
+-------------------------------------------------------------------
+Thu Oct 27 12:49:59 UTC 2016 - ancor@suse.com
+
+- Better management of LVM partitions in Proposal::SpaceMaker
+
+-------------------------------------------------------------------
+Thu Oct 27 13:46:39 CEST 2016 - aschnell@suse.com
+
+- mount special filesystems in target during installation
+
+-------------------------------------------------------------------
+Wed Oct 26 12:26:58 UTC 2016 - ancor@suse.com
+
+- LVM classes added to Refinements::DevicegraphLists
+
+-------------------------------------------------------------------
+Wed Oct 12 13:38:38 UTC 2016 - cwh@suse.com
+
+- Use own textdomain (storage-ng instead of storage) (bsc#1004050)
+- 0.1.4
+
+-------------------------------------------------------------------
+Fri Sep 30 14:05:08 UTC 2016 - ancor@suse.com
+
+- Added new inst_prepdisk client - first version in which the
+  installer commits the changes to the target disk(s).
+- 0.1.3
+
+-------------------------------------------------------------------
+Tue Sep 27 06:00:45 UTC 2016 - ancor@suse.com
+
+- More reusable DiskAnalyzer.
+- Use libstorage mechanisms to check for windows partitions.
+- Added new minimalistic inst_disk_proposal client.
+- 0.1.2
+
+-------------------------------------------------------------------
+Mon Aug  1 13:11:13 UTC 2016 - ancor@suse.com
+
+- Namespaces adapted to avoid conflicts with old yast2-storage
+  and to follow the new YaST convention.
+- 0.1.1
+
+-------------------------------------------------------------------
+Thu Feb 25 16:35:57 CET 2016 - aschnell@suse.com
+
+- initial package with yast2-storage-ng, successor of yast2-storage
+

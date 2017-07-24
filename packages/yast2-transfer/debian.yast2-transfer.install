@@ -1,0 +1,3 @@
+/usr/lib/YaST2/plugin/libpy2ag_tftp.so.*
+/usr/lib/YaST2/plugin/libpy2ag_curl.so.*
+/usr/share/YaST2

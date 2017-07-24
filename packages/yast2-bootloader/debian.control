@@ -1,0 +1,20 @@
+Source: yast2-bootloader
+Section: unknown
+Priority: extra
+Standards-Version: 3.9.2
+Maintainer: YaST devel <yast-devel@opensuse.org>
+Homepage: http://github.com/yast/yast-bootloader
+Vcs-Git: git://github.com/yast/yast-bootloader.git
+
+Package: yast2-bootloader
+Architecture: all
+Depends: ${misc:Depends}, yast2
+Description: YaST2 - Bootloader Configuration
+  This package contains the YaST2 component for bootloader configuration.
+
+Package: yast2-bootloader-doc-dev
+Architecture: all
+Depends: ${misc:Depends}, yast2-bootloader (= ${Source-Version})
+Description: YaST2 - Development Documentation
+  This package contains development documentation for using the API
+  provided by yast2-bootloader package.

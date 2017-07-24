@@ -1,0 +1,14 @@
+Source: yast2-ruby-bindings
+Section: unknown
+Priority: extra
+Maintainer: Yast developers <yast-devel@opensuse.org>
+Standards-Version: 3.9.2
+Homepage: http://github.com/yast/yast-ruby-bindings
+Vcs-Git: git://github.com/yast/yast-ruby-bindings.git
+
+Package: yast2-ruby-bindings
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ruby-fast-gettext, yast2-ycp-ui-bindings, libruby2.1, yast2-core
+Description: Ruby bindings for the YaST platform
+  The bindings allow YaST modules to be written using the Ruby language
+  and also Ruby scripts can use YaST agents, APIs and modules.

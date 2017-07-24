@@ -1,0 +1,14 @@
+Source: yast2-xml
+Section: unknown
+Priority: extra
+Standards-Version: 3.9.2
+Maintainer: YaST devel <yast-devel@opensuse.org>
+Homepage: http://github.com/yast/yast-yast2
+Vcs-Git: git://github.com/yast/yast-yast2.git
+
+Package: yast2-xml
+Architecture: all
+Depends: ${misc:Depends}, yast2-core, libxml2
+Description: YaST2 - XML Agent
+  The YaST2 XML agent
+

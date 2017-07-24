@@ -1,0 +1,13 @@
+Source: yast2-proxy
+Section: unknown
+Priority: extra
+Maintainer: Yast developers <yast-devel@opensuse.org>
+Standards-Version: 3.9.2
+Homepage: http://github.com/yast/yast-proxy
+Vcs-Git: git://github.com/yast/yast-proxy.git
+
+Package: yast2-proxy
+Architecture: all
+Depends: ${misc:Depends}, yast2, yast2-ruby-bindings
+Description: YaST2 - Proxy Configuration
+  This package contains the YaST2 component for proxy configuration.

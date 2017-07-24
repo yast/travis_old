@@ -1,0 +1,25 @@
+Source: libsolv
+Section: unknown
+Priority: extra
+Maintainer: <zypp-maintainers@opensuse.org>
+Standards-Version: 3.9.2
+Homepage: https://github.com/openSUSE/libsolv
+Vcs-Git: git://github.com/openSUSE/libsolv.git
+
+# only static library in libsolv-dev is built
+#Package: libsolv0
+#Architecture: any
+#Depends: ${shlibs:Depends}, ${misc:Depends}
+#Description: A new approach to package dependency solving
+#  A new approach to package dependency solving
+
+Package: libsolv-dev
+Architecture: any
+Depends: librpm-dev
+Description: A new approach to package dependency solving
+  Development files for libsolv, a new approach to package dependency solving
+
+Package: libsolv-tools
+Architecture: any
+Description: A new approach to package dependency solving
+  A new approach to package dependency solving

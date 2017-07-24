@@ -1,0 +1,11 @@
+<services>
+<!--
+  <service name="recompress">
+    <param name="file">*.tar.xz</param>
+    <param name="compression">gz</param>
+  </service>
+  <service name="set_version">
+    <param name="file">debian.dsc</param>
+  </service>
+-->
+</services>

@@ -1,0 +1,21 @@
+Source: yast2-pkg-bindings
+Section: unknown
+Priority: extra
+Maintainer: YaST devel <yast-devel@opensuse.org>
+Standards-Version: 3.9.2
+Homepage: http://github.com/yast/yast-pkg-bindings
+Vcs-Git: git://github.com/yast/yast-pkg-bindings.git
+
+Package: yast2-pkg-bindings
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: YaST2 - Core Libraries
+  Scripts and templates for developing YaST2 modules and components.
+
+Package: yast2-pkg-bindings-doc-dev
+Architecture: any
+Depends: yast2-pkg-bindings (= ${Source-Version})
+Description: YaST2 - Core Libraries
+  This package contains include and documentation files for developing
+  applications using the YaST2 YCP interpreter.
+

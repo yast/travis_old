@@ -1,0 +1,6 @@
+/usr/lib/pkgconfig
+/usr/lib/YaST2/plugin/libpy2UI.so
+/usr/lib/YaST2/plugin/libpy2UI.la
+/usr/share/doc/packages/yast2-ycp-ui-bindings/libyui
+/usr/share/doc/packages/yast2-ycp-ui-bindings/examples
+/usr/include/YaST2/ycp-ui

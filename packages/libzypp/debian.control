@@ -1,0 +1,19 @@
+Source: libzypp
+Section: unknown
+Priority: extra
+Maintainer: <zypp-maintainers@opensuse.org>
+Standards-Version: 3.9.2
+Homepage: https://github.com/openSUSE/libzypp
+Vcs-Git: git://github.com/openSUSE/libzypp.git
+
+Package: libzypp
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A new approach to package dependency solving
+  A new approach to package dependency solving
+
+Package: libzypp-dev
+Architecture: any
+Depends: libzypp (= ${Source-Version}), libsolv-dev, libboost1.54-dev
+Description: A new approach to package dependency solving
+  Development files for libsolv, a new approach to package dependency solving

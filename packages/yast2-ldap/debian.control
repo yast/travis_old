@@ -1,0 +1,15 @@
+Source: yast2-ldap
+Section: unknown
+Priority: extra
+Standards-Version: 3.9.2
+Maintainer: YaST devel <yast-devel@opensuse.org>
+Homepage: http://github.com/yast/yast-ldap
+Vcs-Git: git://github.com/yast/yast-ldap.git
+
+Package: yast2-ldap
+Architecture: any
+Depends: ${misc:Depends}, yast2
+Description: YaST2 - LDAP Agent
+  This agent is used by various YaST2 modules to work with LDAP. It
+  enables searching the LDAP tree and adding/deleting/modifying items on
+  an LDAP server.

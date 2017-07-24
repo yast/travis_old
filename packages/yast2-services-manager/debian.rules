@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	yardoc
+
+override_dh_auto_install:
+	rake install DESTDIR=debian/yast2-services-manager
+

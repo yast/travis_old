@@ -1,0 +1,15 @@
+Source: yast2-perl-bindings
+Section: unknown
+Priority: extra
+Maintainer: Yast developers <yast-devel@opensuse.org>
+Standards-Version: 3.9.2
+Homepage: http://github.com/yast/yast-perl-bindings
+Vcs-Git: git://github.com/yast/yast-perl-bindings.git
+
+Package: yast2-perl-bindings
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, perl, yast2-core
+Description: YaST2 - Perl Bindings
+  This adds an embedded Perl interpreter to YaST2 as a plug-in (in other
+  words it will be loaded only if required). This is a very efficient way
+  of calling Perl from within YaST2 YCP scripts.

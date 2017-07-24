@@ -1,0 +1,39 @@
+Source: libstorage
+Section: unknown
+Priority: extra
+Maintainer: <yast-devel@opensuse.org>
+Standards-Version: 3.9.2
+Homepage: https://github.com/openSUSE/libstorage
+Vcs-Git: git://github.com/openSUSE/libstorage.git
+
+Package: libstorage5
+Architecture: any
+# TODO FIXME: some requires are missing and correct required versions are missing!
+Depends: ${shlibs:Depends}, ${misc:Depends}, cryptsetup, lsscsi, mdadm, parted, lvm2, dmraid, udev
+Description: Library for storage management
+  This package contains libstorage, a library for storage management.
+
+Package: libstorage5-dev
+Architecture: any
+Depends: libstorage5 (= ${Source-Version}), libboost1.54-dev, libxml2-dev
+Description: Header files and documentation for libstorage
+  This package contains header files and documentation for developing with
+  libstorage.
+
+Package: libstorage5-ruby
+Architecture: any
+Depends: libstorage5 (= ${Source-Version}), ruby2.1
+Description: Ruby bindings for libstorage
+  This package contains Ruby bindings for libstorage.
+
+Package: libstorage5-python
+Architecture: any
+Depends: libstorage5 (= ${Source-Version}), python
+Description: Python bindings for libstorage
+  This package contains Python bindings for libstorage.
+
+Package: libstorage5-testsuite
+Architecture: any
+Depends: libstorage5 (= ${Source-Version})
+Description: Testsuite for libstorage
+  This package contains testsuite programs for libstorage.

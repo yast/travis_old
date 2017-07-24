@@ -1,0 +1,31 @@
+Source: font-specimen
+Priority: extra
+Section: Libraries
+Maintainer: pgajdos@suse.com
+Homepage: https://github.com/pgajdos/font-specimen
+Vcs-Git: git://github.com/pgajdos/font-specimen.git
+
+Package: libfont-specimen
+Priority: extra
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Font Specimen Creator
+  Library that allows to create specimens for installed
+  font.
+
+Package: libfont-specimen-dev
+Priority: extra
+Architecture: any
+Depends: libfont-specimen (= ${binary:Version}), libfreetype6-dev, libharfbuzz-dev, libfontconfig1-dev, libpng-dev
+Description: Font Specimen Creator
+  Header and development files for font-specimen library.
+
+Package: font-specimen-bin
+Priority: extra
+Section: utils
+Depends: ${shlibs:Depends}
+Architecture: any
+Description: Font Specimen Creator
+  Creates specimen for given installed font and script it
+  sufficiently coverages. Run font-specimen without
+  parameters to see usage.

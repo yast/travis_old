@@ -1,0 +1,21 @@
+Source: yast2-storage
+Section: unknown
+Priority: extra
+Maintainer: YaST developers <yast-devel@opensuse.org>
+Standards-Version: 3.9.2
+Homepage: http://github.com/yast/yast-storage
+Vcs-Git: git://github.com/yast/yast-storage.git
+
+Package: yast2-storage
+Architecture: any
+Depends: ${misc:Depends}, libstorage5-ruby, yast2, yast2-ruby-bindings, ruby-dbus
+Description: YaST2 - Storage Configuration
+  This package contains the files for YaST2 that handle access to disk
+  devices during installation and on an installed system.
+
+Package: yast2-storage-dev
+Architecture: any
+Depends: ${misc:Depends}, yast2-storage (= ${Source-Version})
+Description: YaST2 - Storage Library Headers and Documentation
+  This package contains the files for YaST2 that are needed if one wants
+  to develop a program using yast2-storage.

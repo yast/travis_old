@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+
+
+%:
+	dh $@
+
+# builds only the dynamic lib, the static lib is not used by Yast
+       

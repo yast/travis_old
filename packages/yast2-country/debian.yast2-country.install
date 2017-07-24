@@ -1,0 +1,12 @@
+/usr/share/YaST2/data/*.ycp
+/usr/share/applications/YaST2
+/usr/share/YaST2/include
+/usr/share/YaST2/scrconf
+/usr/share/YaST2/schema
+/usr/share/YaST2/lib
+/usr/share/YaST2/modules/YaPI
+/usr/share/YaST2/modules/Console.rb
+/usr/share/YaST2/modules/Keyboard.rb
+/usr/share/YaST2/modules/Timezone.rb
+/usr/share/YaST2/clients
+/usr/share/doc/packages/yast2-country

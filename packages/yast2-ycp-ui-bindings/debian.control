@@ -1,0 +1,24 @@
+Source: yast2-ycp-ui-bindings
+Section: unknown
+Priority: extra
+Maintainer: YaST devel <yast-devel@opensuse.org>
+Standards-Version: 3.9.2
+Homepage: http://github.com/yast/yast-ycp-ui-bindings
+Vcs-Git: git://github.com/yast/yast-ycp-ui-bindings.git
+
+Package: yast2-ycp-ui-bindings
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: YaST2 - YCP Bindings for the YaST2 User Interface Engine
+  This package makes the generic YaST2 user interface engine available
+  for YCP applications (YCP is the scripting language in which most YaST2
+  modules are written).
+
+Package: yast2-ycp-ui-bindings-dev
+Architecture: any
+Depends: ${misc:Depends}, yast2-ycp-ui-bindings (= ${Source-Version}), libyui-dev, libboost-dev, yast2-devtools, yast2-core-dev
+Description: YaST2 - YCP Bindings for the YaST2 User Interface Engine
+  This package makes the generic YaST2 user interface engine available
+  for YCP applications (YCP is the scripting language in which most YaST2
+  modules are written).
+

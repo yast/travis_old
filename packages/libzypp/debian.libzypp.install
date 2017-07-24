@@ -1,0 +1,5 @@
+/usr/bin
+/etc
+/usr/share/man
+/usr/lib/libzypp.so.*
+/usr/lib/zypp/notify-message

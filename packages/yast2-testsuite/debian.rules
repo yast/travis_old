@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+
+%:
+	dh $@
+
+# we need to generate the autoconf/automake files first
+override_dh_auto_configure:
+	$(MAKE) -f Makefile.cvs
+	dh_auto_configure
+
+# disable tests for faster builds
+override_dh_auto_test:

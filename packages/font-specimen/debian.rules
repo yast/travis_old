@@ -1,0 +1,64 @@
+#!/usr/bin/make -f
+
+# Turn on verbose mode.
+export DH_VERBOSE=1
+
+# Set debhelper compatibility version.
+export DH_COMPAT=5
+
+CFLAGS = -g
+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+CFLAGS += -O0 -Wall
+else
+CFLAGS += -O2 -Wall
+endif
+
+build: build-stamp
+build-stamp:
+	dh_testdir
+
+	make
+
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+
+	make clean || true
+
+	dh_clean
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+
+	make install DESTDIR=/usr/src/packages/BUILD/debian/tmp INCLUDEDIR=/usr/include LIBDIR=/usr/lib BINDIR=/usr/bin PKG_CONFIG_DIR=/usr/lib/pkgconfig
+
+# Build architecture-independent files here.
+binary-indep: build install
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+
+	dh_install --sourcedir=debian/tmp
+	dh_installman
+	dh_installchangelogs
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_makeshlibs
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install
+

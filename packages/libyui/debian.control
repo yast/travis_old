@@ -1,0 +1,31 @@
+Source: libyui
+Section: unknown
+Priority: extra
+Maintainer: YaST devel <yast-devel@opensuse.org>
+Standards-Version: 3.9.2
+Homepage: http://github.com/libyui/libyui
+Vcs-Git: git://github.com/libyui/libyui.git
+
+Package: libyui6
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Libyui - GUI-abstraction library
+  This is the user interface engine that provides the abstraction from
+  graphical user interfaces (Qt, Gtk) and text based user interfaces
+  (ncurses).
+  .
+  Originally developed for YaST, it can now be used independently of
+  YaST for generic (C++) applications. This package has very few
+  dependencies.
+
+Package: libyui-dev
+Architecture: any
+Depends: ${misc:Depends}, libyui6 (= ${Source-Version}), libboost-dev
+Description: Libyui header files
+  This is the user interface engine that provides the abstraction from
+  graphical user interfaces (Qt, Gtk) and text based user interfaces
+  (ncurses).
+  .
+  Originally developed for YaST, it can now be used independently of
+  YaST for generic (C++) applications. This package has very few
+  dependencies.

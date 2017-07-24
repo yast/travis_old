@@ -1,0 +1,20 @@
+Source: yast2-inetd
+Section: unknown
+Priority: extra
+Standards-Version: 3.9.2
+Maintainer: YaST devel <yast-devel@opensuse.org>
+Homepage: http://github.com/yast/yast-inetd
+Vcs-Git: git://github.com/yast/yast-inetd.git
+
+Package: yast2-inetd
+Architecture: any
+Depends: ${misc:Depends}, yast2, yast2-packager, yast2-users
+Description: YaST2 - Network Services Configuration
+  The YaST2 component for configuring the inetd and xinetd daemons.
+
+Package: yast2-inetd-doc-dev
+Architecture: any
+Depends: ${misc:Depends}, yast2-inetd (= ${Source-Version})
+Description: YaST2 - Network Services Configuration
+  The YaST2 component for configuring the inetd and xinetd daemons
+  (documentation).
