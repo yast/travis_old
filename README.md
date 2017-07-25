@@ -2,6 +2,7 @@
 # YaST - Old Travis Backup
 
 ![Repo size badge](https://reposs.herokuapp.com/?path=yast/travis_old)
+![Obsolete badge](https://img.shields.io/badge/status-obsolete-red.svg)
 
 :skull: The old YaST Travis packages are buried here, RIP! :skull:
 
