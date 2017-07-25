@@ -5,6 +5,9 @@
 
 :skull: The old YaST Travis packages are buried here, RIP! :skull:
 
+
+## Description
+
 This repository contains a backup of the old Travis packages used by YaST.
 Originally we built YaST DEB packages to use them at Travis which is running
 an Ubuntu distribution by default.
@@ -18,6 +21,11 @@ obsolete.
 
 The YaST Debian packaging files have the usual GNU GPLv2 license. However the
 other non-YaST packages might have a different license.
+
+## GIT
+
+If you want to see the old packages check the [*master_old*](
+../../tree/master_old/packages) branch.
 
 ## Warnings
 
