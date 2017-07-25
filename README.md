@@ -1,9 +1,11 @@
 
 # YaST - Old Travis Backup
 
-![Repo size badge](https://reposs.herokuapp.com/?path=yast/travis_old)
+![Obsolete badge](https://img.shields.io/badge/status-obsolete-red.svg)
 
 :skull: The old YaST Travis packages are buried here, RIP! :skull:
+
+## Description
 
 This repository contains a backup of the old Travis packages used by YaST.
 Originally we built YaST DEB packages to use them at Travis which is running
@@ -27,8 +29,7 @@ other non-YaST packages might have a different license.
   for running the unit tests where we mocked (simulated) the system access with
   successful result.
 - :warning: Due to backup of the source tarballs the Git repository size is
-  *huge*! Do not clone the repository unless you really need it! See the size
-  badge at the top.
+  *huge* (~260MB)! Do not clone the repository unless you really need it!
 - :warning: The repository contains a snapshot taken at some point of time, the
   packages are not updated anymore.
 - The packaging took us quite some time so it might be still useful for someone
