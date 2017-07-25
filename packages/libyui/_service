@@ -1,7 +1,0 @@
-<services>
-<!--
-  <service name="set_version">
-    <param name="file">debian.dsc</param>
-  </service>
--->
-</services>

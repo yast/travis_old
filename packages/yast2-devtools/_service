@@ -1,5 +1,0 @@
-<services>
-  <service name="set_version" mode="disabled">
-    <param name="file">debian.dsc</param>
-  </service>
-</services>

@@ -1,8 +1,0 @@
-/usr/lib/YaST2/bin/ybcdump
-/usr/lib/lib*.so
-/usr/lib/lib*.la
-/usr/lib/YaST2/plugin/lib*.so
-/usr/lib/YaST2/plugin/lib*.la
-/usr/include/YaST2
-/usr/lib/pkgconfig/yast2-core.pc
-/usr/share/YaST2/data/devtools/bin/generateYCPWrappers

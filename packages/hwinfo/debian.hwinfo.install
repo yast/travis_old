@@ -1,5 +1,0 @@
-/usr/sbin/hwinfo
-/usr/sbin/mk_isdnhwdb
-/usr/sbin/getsysinfo
-/usr/lib64/libhd.so.* /usr/lib
-/usr/share/hwinfo

@@ -1,7 +1,0 @@
-/usr/lib/YaST2/bin
-/usr/lib/YaST2/plugin/lib*.so.*
-/usr/share/YaST2
-/usr/share/applications/YaST2
-/var/adm/fillup-templates
-/usr/share/doc/packages/yast2-storage/COPYING
-/usr/share/doc/packages/yast2-storage/README.part.info

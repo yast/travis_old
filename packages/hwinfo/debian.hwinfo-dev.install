@@ -1,5 +1,0 @@
-/usr/sbin/check_hd
-/usr/sbin/convert_hd
-/usr/lib64/libhd.so /usr/lib
-/usr/include
-/usr/lib64/pkgconfig /usr/lib
